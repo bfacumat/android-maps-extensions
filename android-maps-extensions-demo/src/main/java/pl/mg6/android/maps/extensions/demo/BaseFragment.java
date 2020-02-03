@@ -16,12 +16,14 @@
 package pl.mg6.android.maps.extensions.demo;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+
 import com.androidmapsextensions.GoogleMap;
+import com.androidmapsextensions.OnMapReadyCallback;
 import com.androidmapsextensions.SupportMapFragment;
 
 public abstract class BaseFragment extends Fragment {
@@ -58,10 +60,15 @@ public abstract class BaseFragment extends Fragment {
 
     private void setUpMapIfNeeded() {
         if (map == null) {
-            map = mapFragment.getExtendedMap();
-            if (map != null) {
-                setUpMap();
-            }
+            mapFragment.getExtendedMapAsync(new OnMapReadyCallback() {
+                @Override
+                public void onMapReady(GoogleMap googleMap) {
+                    map = googleMap;
+                    setUpMap();
+
+                }
+            });
+
         }
     }
 

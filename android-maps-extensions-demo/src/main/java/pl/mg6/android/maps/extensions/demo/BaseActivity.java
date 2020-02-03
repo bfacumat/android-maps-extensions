@@ -15,7 +15,7 @@
  */
 package pl.mg6.android.maps.extensions.demo;
 
-import android.support.v7.app.ActionBarActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
-public class BaseActivity extends ActionBarActivity {
+public class BaseActivity extends AppCompatActivity {
 }
