@@ -4,8 +4,6 @@ tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
 
-def isCI = System.env.CI == "true"
-
 ext {
     localCompileSdkVersion = project.hasProperty("AME_COMPILE_SDK_VERSION") ? AME_COMPILE_SDK_VERSION : 28
     localMinSdkVersion = project.hasProperty("AME_MIN_SDK_VERSION") ? AME_MIN_SDK_VERSION : 14
@@ -18,9 +16,7 @@ android {
         minSdkVersion localMinSdkVersion
         targetSdkVersion 28
     }
-    dexOptions {
-        preDexLibraries = !isCI
-    }
+
     lintOptions {
         abortOnError false
     }
