@@ -17,7 +17,7 @@ Gradle
 ------
 ```Groovy
 dependencies {
-    implementation 'com.github.bfacumat:android-maps-extensions:4.0.1'
+    implementation 'com.github.bfacumat:android-maps-extensions:4.0.2'
     implementation 'com.google.android.gms:play-services-maps:17.0.0'
 }
 ```
