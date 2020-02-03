@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/mg6maciej/android-maps-extensions.svg?branch=develop)](https://travis-ci.org/mg6maciej/android-maps-extensions)
+[![Build Status](https://travis-ci.org/bfacumat/android-maps-extensions.svg?branch=develop)](https://travis-ci.org/mg6maciej/android-maps-extensions)
 [![](https://jitpack.io/v/bfacumat/android-maps-extensions.svg)](https://jitpack.io/#bfacumat/android-maps-extensions)
 
 Android Maps Extensions
